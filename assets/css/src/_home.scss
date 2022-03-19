@@ -1,0 +1,160 @@
+body {
+	line-height: 1.2;
+	font-size: 16px;
+	font-family: roboto;
+}
+h1 {
+	font-family: OS_B;
+	font-size: 35px;
+	color: $blue;
+	margin: 40px 0 25px;
+}
+h2 {
+	font-size: 1.6rem;
+	margin: 20px 0 15px;
+}
+h3 {
+	font-size: 1.3rem;
+	margin: 15px 0 10px;
+}
+h4 {
+	font-size: 1.2rem;
+	margin: 15px 0 10px;
+	font-weight: 700;
+}
+header {
+	height: 50px;
+	background-color: blue;
+	position: relative;
+	nav {
+		&>ul {
+			width: 90%;
+			align-items: center;
+			height: 50px;
+			list-style-type: none;
+			font-family: OS_I;
+			@include flex(space-evenly, center);
+			&>li {
+				font-size: 20px;
+				cursor: pointer;
+				color: white;
+				&:not(:last-child) {
+					margin-right: 15px;
+				}
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+}
+.content_page {
+	padding: 50px 10%;
+}
+code {
+	background-color: #e0dbdb;
+	display: inline-block;
+	padding: 10px 15px;
+}
+span:not(.delete_label) {
+	margin-left: 20px;
+}
+.file_form {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	form {
+		text-align: left;
+	}
+	label {
+		display: block;
+		margin-top: 30px;
+	}
+	input, select, textarea {
+		width: 100%;
+	}
+	span.red {
+		margin-left: 5px;
+		color: red;
+	}
+}
+.article {
+	border: 1px solid #000;
+	margin: 25px 0;
+	padding: 10px;
+	.comments {
+		border: 1px solid #000;
+		margin: 10px;
+		padding: 10px;
+	}
+	.comment:not(:last-child) {
+		border-bottom: 1px solid #000;
+	}
+}
+.span {
+		margin-left: 0;
+	}
+.connect {
+	position: relative;
+}
+.modal_connect {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	padding: 20px;
+	border: 2px solid #000;
+	border-radius: 10px;
+}
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+.comment {
+	@include flex(space-between, center);
+	.comment_action {
+		@include flex(center, center, column);
+	}
+	.fa-solid {
+		text-align: center;
+		margin: 10px;
+		font-size: 20px;
+	}
+}
+.pop_delete {
+	display: none;
+	position: fixed;
+	padding: 30px;
+	background-color: #fff;
+	border: 2px #000 solid;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.delete_action {
+		margin-top: 20px;
+		@include flex(space-evenly, center);
+	}
+}
+.navigation {
+	@include flex(center, center);
+	li {
+		padding: 5px 10px;
+		a {
+			text-decoration: none;
+		}
+	}
+	.futur_page {
+		font-weight: 700;
+	}
+	.active {
+		color: #fff;
+		background-color: red;
+		border-radius: 5px;
+		cursor: default;
+	}
+	.disabled {
+		cursor: not-allowed;
+		opacity: 20%;
+	}
+}
